@@ -1,0 +1,6 @@
+{
+  "parent": "createindestructible:block/forgecore",
+  "textures": {
+    "layer0": "createindestructible:block/forgecore"
+  }
+}

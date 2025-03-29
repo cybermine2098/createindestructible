@@ -1,0 +1,43 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": { "item": "minecraft:obsidian" },
+  "transitionalItem": { "item": "createindestructible:forgecore_incomplete" },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "createindestructible:forgecore_incomplete" },
+        { "item": "minecraft:cobblestone" }
+      ],
+      "results": [
+        { "item": "createindestructible:forgecore_incomplete" }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        { "item": "createindestructible:forgecore_incomplete" },
+        { "fluid": "minecraft:lava", "amount": 250 }
+      ],
+      "results": [
+        { "item": "createindestructible:forgecore_incomplete" }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        { "item": "createindestructible:forgecore_incomplete" }
+      ],
+      "results": [
+        { "item": "createindestructible:forgecore_incomplete" }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "createindestructible:forgecore",
+      "chance": 1.0
+    }
+  ],
+  "loops": 15
+}
