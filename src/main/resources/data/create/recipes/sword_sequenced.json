@@ -1,0 +1,68 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:netherite_sword"
+  },
+  "transitionalItem": {
+    "item": "createindestructible:incomplete_sword"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createindestructible:incomplete_sword"
+        },
+        {
+          "item": "createindestructible:forgecore"
+        }
+      ],
+      "results": [
+        {
+          "item": "createindestructible:incomplete_sword"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "createindestructible:incomplete_sword"
+        },
+        {
+          "fluid": "minecraft:lava",
+          "amount": 1000
+        }
+      ],
+      "results": [
+        {
+          "item": "createindestructible:incomplete_sword"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createindestructible:incomplete_sword"
+        }
+      ],
+      "results": [
+        {
+          "item": "createindestructible:incomplete_sword"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "createindestructible:sword",
+      "chance": 0.9
+    },
+    {
+      "item": "minecraft:dirt",
+      "chance": 0.1
+    }
+  ],
+  "loops": 64
+}

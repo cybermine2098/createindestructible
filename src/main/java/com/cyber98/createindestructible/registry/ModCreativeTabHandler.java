@@ -13,9 +13,15 @@ public class ModCreativeTabHandler {
     public static void addItemsToCreativeTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.FORGECORE_ITEM);
+        }else if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModBlocks.FORGECORE_INCOMPLETE);
             event.accept(ModBlocks.DIAMOND_INCOMPLETE);
             event.accept(ModBlocks.LAPIS_INCOMPLETE);
+            event.accept(ModBlocks.INCOMPLETE_SWORD);
+        }else if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept(ModBlocks.IMMORTAL_COOKIE);
+        }else if(event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ModBlocks.SWORD);
         }
     }
 }

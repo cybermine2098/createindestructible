@@ -1,0 +1,10 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    { "item": "minecraft:cookie" },
+    { "item": "createindestructible:forgecore" }
+  ],
+  "results": [
+    { "item": "createindestructible:immortal_cookie" }
+  ]
+}
