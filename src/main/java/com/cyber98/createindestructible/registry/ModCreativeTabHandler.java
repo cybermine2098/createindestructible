@@ -14,6 +14,8 @@ public class ModCreativeTabHandler {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.FORGECORE_ITEM);
             event.accept(ModBlocks.FORGECORE_INCOMPLETE);
+            event.accept(ModBlocks.DIAMOND_INCOMPLETE);
+            event.accept(ModBlocks.LAPIS_INCOMPLETE);
         }
     }
 }

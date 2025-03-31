@@ -1,3 +1,6 @@
 {
-  "block.createindestructible.forgecore": "Forgecore"
+  "block.createindestructible.forgecore": "Forgecore",
+  "item.createindestructible.forgecore_incomplete": "Incomplete Forgecore",
+  "item.createindestructible.diamond_incomplete": "Incomplete Diamond",
+  "item.createindestructible.lapis_incomplete": "Incomplete Lapis"
 }

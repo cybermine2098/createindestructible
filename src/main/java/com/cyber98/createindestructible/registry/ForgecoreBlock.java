@@ -27,7 +27,7 @@ public class ForgecoreBlock extends Block implements EntityBlock {
         return new ForgecoreBlockEntity(pos, state);
     }
 
-    // 🔧 THIS is called after placement and after the BlockEntity exists
+    // called after placement and after the BlockEntity exists
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         if (!level.isClientSide && placer instanceof Player player) {
@@ -38,7 +38,7 @@ public class ForgecoreBlock extends Block implements EntityBlock {
         }
     }
 
-    // 🔒 Only allow the owner to destroy it
+    // Only allow the owner to destroy it
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
@@ -58,18 +58,18 @@ public class ForgecoreBlock extends Block implements EntityBlock {
         super.playerWillDestroy(level, pos, state, player);
     }
 
-    // 🧱 Make it much faster for the owner to break
+    //  Make it much faster for the owner to break
     @Override
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof ForgecoreBlockEntity forgecore) {
             if (player.getStringUUID().equals(forgecore.getOwnerUUID())) {
-                return 1.0F; // Like obsidian-ish
+                return 0.01F; // Generally hard to break, but nothing crazy
             } else {
-                return 0.0001F; // Basically unbreakable
+                return -1.0F; // Bedrock
             }
         }
 
-        return 0.0001F;
+        return -1.0F; //In case the block was placed with setblock or another command
     }
 }

@@ -7,7 +7,7 @@
       "type": "create:deploying",
       "ingredients": [
         { "item": "createindestructible:forgecore_incomplete" },
-        { "item": "minecraft:cobblestone" }
+        { "item": "minecraft:diamond_block" }
       ],
       "results": [
         { "item": "createindestructible:forgecore_incomplete" }
@@ -17,7 +17,7 @@
       "type": "create:filling",
       "ingredients": [
         { "item": "createindestructible:forgecore_incomplete" },
-        { "fluid": "minecraft:lava", "amount": 250 }
+        { "fluid": "minecraft:lava", "amount": 1000 }
       ],
       "results": [
         { "item": "createindestructible:forgecore_incomplete" }
@@ -27,6 +27,16 @@
       "type": "create:pressing",
       "ingredients": [
         { "item": "createindestructible:forgecore_incomplete" }
+      ],
+      "results": [
+        { "item": "createindestructible:forgecore_incomplete" }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "createindestructible:forgecore_incomplete" },
+        {"item": "minecraft:obsidian"}
       ],
       "results": [
         { "item": "createindestructible:forgecore_incomplete" }

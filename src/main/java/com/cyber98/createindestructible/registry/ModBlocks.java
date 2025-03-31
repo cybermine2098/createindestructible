@@ -11,7 +11,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+
 public class ModBlocks {
+
+
+    // REGISTER REGISTERS... or something idrk
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CreateIndestructible.MOD_ID);
@@ -19,16 +24,30 @@ public class ModBlocks {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CreateIndestructible.MOD_ID);
 
+    //
+    // REGISTER ALL BLOCKS
+    //
     public static final RegistryObject<Block> FORGECORE_BLOCK = BLOCKS.register("forgecore",
             () -> new ForgecoreBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(50.0F, 1200.0F)
                     .requiresCorrectToolForDrops()
             ));
+
+    //
+    // REGISTER ALL ITEMS
+    //
     public static final RegistryObject<Item> FORGECORE_INCOMPLETE = ITEMS.register("forgecore_incomplete",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> DIAMOND_INCOMPLETE = ITEMS.register("diamond_incomplete",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LAPIS_INCOMPLETE = ITEMS.register("lapis_incomplete",
+            () -> new Item(new Item.Properties()));
 
+    //
+    //  REGISTER ALL BLOCK ITEMS
+    //
 
     public static final RegistryObject<Item> FORGECORE_ITEM = ITEMS.register("forgecore",
             () -> new BlockItem(FORGECORE_BLOCK.get(), new Item.Properties()));

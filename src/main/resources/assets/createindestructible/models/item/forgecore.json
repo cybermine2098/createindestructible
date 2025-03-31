@@ -1,6 +1,6 @@
 {
-  "parent": "createindestructible:block/forgecore",
+  "parent": "block/cube_all",
   "textures": {
-    "layer0": "createindestructible:block/forgecore"
+    "all": "createindestructible:item/forgecore"
   }
 }

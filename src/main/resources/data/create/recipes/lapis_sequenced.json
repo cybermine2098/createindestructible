@@ -1,0 +1,38 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:quartz_block"
+  },
+  "transitionalItem": {
+    "item": "minecraft:quartz_block"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:quartz_block"
+        },
+        {
+          "item": "minecraft:blue_dye"
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:lapis_block"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:lapis_block",
+      "chance": 1.0
+    },
+    {
+      "item": "minecraft:lapis_lazuli",
+      "chance": 0.3
+    }
+  ],
+  "loops": 1
+}
