@@ -17,7 +17,8 @@ out
 .vscode
 
 # gradle
-build
+build/*
+!build/libs/**
 .gradle
 
 # other
