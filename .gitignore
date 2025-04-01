@@ -18,8 +18,8 @@ out
 
 # gradle
 build/*
-!build/libs/**
-.gradle
+!build/libs/
+.gradle/
 
 # other
 eclipse
