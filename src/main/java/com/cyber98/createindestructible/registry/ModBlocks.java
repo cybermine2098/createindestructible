@@ -39,6 +39,13 @@ public class ModBlocks {
                     .strength(500.0F, 12000.0F)
                     .requiresCorrectToolForDrops()
             ));
+    public static final RegistryObject<Block> LEWITE_BLOCK = BLOCKS.register("lewite",
+            () -> new LewiteBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .strength(5.0F, 120.0F)
+                    .requiresCorrectToolForDrops()
+                    .friction(0.5F)
+            ));
 
     //
     // REGISTER ALL ITEMS
@@ -53,13 +60,31 @@ public class ModBlocks {
 
     public static final RegistryObject<Item> INCOMPLETE_SWORD = ITEMS.register("incomplete_sword",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CARBON = ITEMS.register("carbon",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .food(new FoodProperties.Builder()
+                            .nutrition(1)
+                            .saturationMod(1.0F)
+                            .alwaysEat() //even if full
+                            .build())) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+                    tooltip.add(Component.literal("A byproduct of manufacturing coal").withStyle(ChatFormatting.ITALIC));
+                }
+            });
     public static final RegistryObject<Item> SWORD = ITEMS.register("sword",
             () -> new SwordItem(Tiers.DIAMOND, 50, -3.9F, // Attack damage and attack speed
                     new Item.Properties()
                             .stacksTo(1)
                             .fireResistant()
                             .rarity(Rarity.EPIC)
-            ));
+            ){
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+                    tooltip.add(Component.literal("A mythical weapon that requires extreme skill to use correctly").withStyle(ChatFormatting.GOLD));
+                }
+            });
 
     public static final RegistryObject<Item> IMMORTAL_COOKIE = ITEMS.register("immortal_cookie", () ->
             new Item(new Item.Properties()
@@ -84,7 +109,20 @@ public class ModBlocks {
     //
 
     public static final RegistryObject<Item> FORGECORE_ITEM = ITEMS.register("forgecore",
-            () -> new BlockItem(FORGECORE_BLOCK.get(), new Item.Properties()));
+            () -> new BlockItem(FORGECORE_BLOCK.get(), new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+                    tooltip.add(Component.literal("An indestructible block to those who don't place it").withStyle(ChatFormatting.ITALIC));
+                }
+            });
+
+    public static final RegistryObject<Item> LEWITE_ITEM = ITEMS.register("lewite",
+            () -> new BlockItem(LEWITE_BLOCK.get(), new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+                    tooltip.add(Component.literal("An (unobtainable / uncraftable) indestructible block that only server admins can break.").withStyle(ChatFormatting.ITALIC));
+                }
+            });
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

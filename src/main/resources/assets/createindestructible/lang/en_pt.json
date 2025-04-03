@@ -4,6 +4,8 @@
   "item.createindestructible.diamond_incomplete": "Fake booty",
   "item.createindestructible.lapis_incomplete": "Fake Lazhward",
   "item.createindestructible.immortal_cookie": "Biscuit of Pain tolerance",
-  "item.createindestructible.incomplete_sword": "Incomplete Forgecore Sword",
-  "item.createindestructible.sword": "Forgecore Sword"
+  "item.createindestructible.incomplete_sword": "Incomplete Forgecore Shwashbuckler",
+  "item.createindestructible.sword": "Forgecore Shwashbuckler",
+  "block.createindestructible.lewite": "Blewite",
+  "item.createindestructible.carbon": "Yaaarrghbon"
 }

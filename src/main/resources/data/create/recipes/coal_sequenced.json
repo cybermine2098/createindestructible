@@ -1,0 +1,68 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "transitionalItem": {
+    "item": "minecraft:blackstone"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:blackstone"
+        },
+        {
+          "item": "minecraft:black_dye"
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:blackstone"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "minecraft:blackstone"
+        },
+        {
+          "fluid": "minecraft:lava",
+          "amount": 250
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:blackstone"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "minecraft:blackstone"
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:blackstone"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:coal",
+      "chance": 0.75
+    },
+    {
+      "item": "createindestructible:carbon",
+      "chance": 0.25
+    }
+  ],
+  "loops": 1
+}

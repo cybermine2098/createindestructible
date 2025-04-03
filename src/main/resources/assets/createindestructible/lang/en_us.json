@@ -5,5 +5,7 @@
   "item.createindestructible.lapis_incomplete": "Incomplete Lapis",
   "item.createindestructible.immortal_cookie": "Cookie of Immortality",
   "item.createindestructible.incomplete_sword": "Incomplete Forgecore Sword",
-  "item.createindestructible.sword": "Forgecore Sword"
+  "item.createindestructible.sword": "Forgecore Sword",
+  "block.createindestructible.lewite": "Lewite",
+  "item.createindestructible.carbon": "Carbon"
 }

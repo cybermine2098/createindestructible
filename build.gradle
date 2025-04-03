@@ -54,16 +54,16 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { url = "https://maven.tterrag.com/" } // Create
-    maven { url = "https://modmaven.dev" }       // JEI
-    maven { url = "https://dvs1.progwml6.com/files/maven/" } // JEI fallback
+    maven { url = "https://maven.tterrag.com/" } // Create?
+    maven { url = "https://modmaven.dev" }
+    maven { url = "https://dvs1.progwml6.com/files/maven/" }
+    maven { url = "https://maven.blamejared.com/" }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // Runtime-only dependencies (no need to compile against them)
-    runtimeOnly fg.deobf("com.simibubi.create:create-1.20.1:0.5.1.g:slim")
     runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.24")
 }
 

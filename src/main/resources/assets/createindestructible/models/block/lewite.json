@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "createindestructible:block/lewite_top",
+		"side": "createindestructible:block/lewite_side"
+	}
+}

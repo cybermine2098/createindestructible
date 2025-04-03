@@ -34,6 +34,7 @@ public class ForgecoreBlock extends Block implements EntityBlock {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof ForgecoreBlockEntity forgecore) {
                 forgecore.setOwnerUUID(player.getStringUUID());
+                player.sendSystemMessage(Component.literal("Bound to: "+player.getName().getString()));
             }
         }
     }
@@ -50,7 +51,6 @@ public class ForgecoreBlock extends Block implements EntityBlock {
                     if (player instanceof ServerPlayer sp) {
                         sp.sendSystemMessage(Component.literal("Successfully broke block that you didn't place!"));
                     }
-                    return;
                 }
             }
         }
@@ -63,13 +63,16 @@ public class ForgecoreBlock extends Block implements EntityBlock {
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof ForgecoreBlockEntity forgecore) {
+            if(forgecore.getOwnerUUID().equals("")){
+                return -1.0F; //this works I tested it
+            }
             if (player.getStringUUID().equals(forgecore.getOwnerUUID())) {
-                return 0.01F; // Generally hard to break, but nothing crazy
+                return 1.0F; // Generally hard to break, but nothing crazy
             } else {
                 return -1.0F; // Bedrock
             }
         }
+        return 1.0F; //It's okay to break the broken/glitched blocks
 
-        return -1.0F; //In case the block was placed with setblock or another command
     }
 }
