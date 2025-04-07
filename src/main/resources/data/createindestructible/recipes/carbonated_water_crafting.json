@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "show_notification": false,
+  "pattern":  [
+      "C  ",
+      "D  ",
+      "   "
+    ],
+  "key": {
+    "C": {
+      "item": "createindestructible:carbon"
+    },
+    "D": {
+      "item": "minecraft:water_bottle"
+    }
+  },
+  "result": {
+    "item": "createindestructible:carbonated_water"
+  }
+}

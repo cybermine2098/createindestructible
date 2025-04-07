@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "createindestructible:soda"
+    }
+  ],
+  "results": [
+    {
+      "item": "createindestructible:firefox_block",
+      "count": 1
+    }
+  ],
+  "processingTime": 300
+}
