@@ -15,6 +15,7 @@ out
 
 # vscode
 .vscode
+pan.txt
 
 # gradle
 build/*

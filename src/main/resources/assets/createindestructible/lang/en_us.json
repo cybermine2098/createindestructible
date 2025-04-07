@@ -7,5 +7,9 @@
   "item.createindestructible.incomplete_sword": "Incomplete Forgecore Sword",
   "item.createindestructible.sword": "Forgecore Sword",
   "block.createindestructible.lewite": "Lewite",
-  "item.createindestructible.carbon": "Carbon"
+  "item.createindestructible.carbon": "Carbon",
+  "item.createindestructible.carbonated_water": "Carbonated Water",
+  "item.createindestructible.soda": "Soda",
+  "block.createindestructible.firefox_block": "Block of firefox",
+  "block.createindestructible.atmosphere_extractor": "Atmospheric Condenser"
 }

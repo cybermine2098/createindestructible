@@ -7,5 +7,9 @@
   "item.createindestructible.incomplete_sword": "Incomplete Forgecore Shwashbuckler",
   "item.createindestructible.sword": "Forgecore Shwashbuckler",
   "block.createindestructible.lewite": "Blewite",
-  "item.createindestructible.carbon": "Yaaarrghbon"
+  "item.createindestructible.carbon": "Yaaarrghbon",
+  "item.createindestructible.carbonated_water": "Carbonated Water",
+  "item.createindestructible.soda": "Soda",
+  "block.createindestructible.firefox_block": "Block of firefox",
+  "block.createindestructible.atmosphere_extractor": "Sky Stealer"
 }

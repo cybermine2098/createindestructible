@@ -14,8 +14,11 @@ public class ModCreativeTabHandler {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.FORGECORE_ITEM);
             event.accept(ModBlocks.LEWITE_ITEM);
+            event.accept(ModBlocks.FIREFOX_BLOCK);
         }else if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModBlocks.IMMORTAL_COOKIE);
+            event.accept(ModBlocks.CARBONATED_WATER);
+            event.accept(ModBlocks.SODA);
         }else if(event.getTabKey() == CreativeModeTabs.COMBAT){
             event.accept(ModBlocks.SWORD);
         }else if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){

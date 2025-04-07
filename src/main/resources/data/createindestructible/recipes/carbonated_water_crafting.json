@@ -3,16 +3,16 @@
   "category": "equipment",
   "show_notification": false,
   "pattern":  [
-      "C  ",
-      "D  ",
-      "   "
-    ],
+    "C  ",
+    "D  ",
+    "   "
+  ],
   "key": {
     "C": {
       "item": "createindestructible:carbon"
     },
     "D": {
-      "item": "minecraft:water_bottle"
+      "item": "minecraft:water_bucket"
     }
   },
   "result": {
